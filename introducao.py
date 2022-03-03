@@ -1,11 +1,10 @@
-# Paradigma imperativo
-
-
 """
 Paradigma Imperativo - Fortran - Sequência, Decisão e Iteração
 Paradigma Estruturado - C - Structs
 Paradigma Procedural - Python
 """
+
+# Paradigma imperativo
 
 
 def Registrar(nome, idade, cpf, email):
@@ -36,7 +35,31 @@ class Paciente:
 Simulação de eventos discretos -> POO
 
 Relação -> Destancando funções e variáveis
+
+-------------------------------------------
+Conceitos Estruturais
+
+- Classe
+É uma estrutura que abstrai um conjunto de objetos com características
+similares. Definindo o comportamento dos seus objetos através das
+estruturas.:
+
+1- Atributos
+2- Métodos
+
+A classe define um tipo de dado abstrato.
 """
 
 # Reuso e Coesão: sempre focar nisso
 # Acoplamento, Herança, Polimorfismo, GAP semântico
+
+"""
+Conceitos Fundamentais
+
+- Abstração
+Processo pelo qual se isolam atributos de um objeto, considerando
+os que certos grupos de objetos tem em comum.
+
+- Reúso
+Não existe pior prática em programação do que repetir código.
+"""
