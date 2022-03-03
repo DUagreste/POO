@@ -1,3 +1,6 @@
+# Paradigma imperativo
+
+
 """
 Paradigma Imperativo - Fortran - Sequência, Decisão e Iteração
 Paradigma Estruturado - C - Structs
@@ -11,3 +14,14 @@ def Registrar(nome, idade, cpf, email):
 
 
 # Reuso e Coesão: sempre focar nisso
+
+# Paradigma Orientado à Objetos
+"""
+Classe
+Objeto
+Construtor
+"""
+
+
+class Paciente:
+    pass
