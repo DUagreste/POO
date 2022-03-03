@@ -3,6 +3,14 @@ class Conta:
     # Atributos de classe
     taxa = 0.50
 
+    @classmethod
+    def retornarCodigo(cls):
+        print('Código: 555')
+
+    @staticmethod
+    def retornarCodigoBanco():
+        print('Código: 345')
+
     # Atributos de instâncias
     def __init__(self, numero, titular, saldo):
         self.numero = numero
@@ -41,3 +49,11 @@ del conta2.carro
 
 print(conta1.__dict__)
 print(conta2.__dict__)
+
+# Método da Classe
+Conta.retornarCodigo()  # Convenção
+conta1.retornarCodigo()
+
+# Método Estático
+Conta.retornarCodigoBanco()  # Convenção
+conta2.retornarCodigoBanco()
