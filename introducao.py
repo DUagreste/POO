@@ -50,7 +50,8 @@ estruturas.:
 A classe define um tipo de dado abstrato.
 """
 
-# Reuso e Coesão: sempre focar nisso
+# Abstração
+# Reuso e Coesão
 # Acoplamento, Herança, Polimorfismo, GAP semântico
 
 """
