@@ -13,15 +13,30 @@ def Registrar(nome, idade, cpf, email):
     return paciente
 
 
-# Reuso e Coesão: sempre focar nisso
-
 # Paradigma Orientado à Objetos
 """
-Classe
-Objeto
-Construtor
+Classe - um conjunto de objeto com a mesma característica
+Objeto - dado de uma classe que representa "o mundo real"
+Construtor - uma função criada com mesmo nome da classe
+Atributo - são variáveis de uma classe
 """
 
 
 class Paciente:
-    pass
+
+    def __init__(self, nome, idade, cpf, email):
+        print("Criei o objeto!")
+        self.nome = nome
+        self.idade = idade
+        self.cpf = cpf
+        self.email = email
+
+
+"""
+Simulação de eventos discretos -> POO
+
+Relação -> Destancando funções e variáveis
+"""
+
+# Reuso e Coesão: sempre focar nisso
+# Acoplamento, Herança, Polimorfismo, GAP semântico
