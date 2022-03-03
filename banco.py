@@ -10,3 +10,8 @@ class Conta:
 
     def deposito(self, valor):
         self.saldo += valor
+        print("Transação efetuada com sucesso!")
+
+    def saque(self, valor):
+        self.saldo -= valor
+        print("Transação efetuada com sucesso!")
