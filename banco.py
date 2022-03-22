@@ -12,7 +12,7 @@ qualquer lugar.
 class Conta:
 
     # Atributos de classe
-    taxa = 0.50
+    taxa = 0
 
     @classmethod
     def retornarCodigo(cls):
@@ -23,23 +23,46 @@ class Conta:
         print('Código: 345')
 
     # Atributos de instâncias
-    def __init__(self, numero, titular, saldo):
+    def __init__(self, numero, titular, saldo=2000):
         self._numero = numero   # Visibilidade protegida (protected)
         self.titular = titular  # Visibilidade pública (public)
         self.__saldo = saldo    # Visibilidade privada (private)
+        self.__historico = [saldo]
 
-    def extrato(self):
+    def transacao(self, saldo):
+        self.__historico.append(saldo)
+
+    def saldo(self):
         self.__saldo -= Conta.taxa
         print(f'Saldo: R${self.__saldo}')
 
+    def extrato(self):
+        print("---- Extrato ----")
+        print("Conta: ", self.titular)
+        for saldo in self.__historico:
+            print(f'Saldo: R${saldo}')
+
     def deposito(self, valor):
         self.__saldo += valor
-        print("Transação efetuada com sucesso!")
+        self.transacao(self.__saldo)
 
     def saque(self, valor):
         self.__saldo -= valor
-        print("Transação efetuada com sucesso!")
+        self.transacao(self.__saldo)
 
+    def transferir(self, valor, destino):
+        self.saque(valor)
+        destino.deposito(valor)
+
+
+conta1 = Conta(123, 'Vitor')
+conta2 = Conta(456, 'Pedro', 5000)
+
+conta2.transferir(700, conta1)
+conta1.saldo()
+conta2.saldo()
+conta2.transferir(200, conta1)
+conta2.extrato()
 
 """# Instâncias da Classe Conta
 conta1 = Conta(1, 'Maria Silva', 5000)

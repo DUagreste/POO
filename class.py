@@ -1,6 +1,3 @@
-from mimetypes import init
-
-
 class Quadrado:
 
     def __init__(self, lado):
